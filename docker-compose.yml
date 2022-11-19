@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  mysql_gitea:
+    image: mysql:8
+    container_name: mysql
+    env_file:
+      - ./env/mysql.env
+    volumes:
+      - ./mysql/:/var/lib/mysql
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 500M
+    networks:
+      - mysql
+
+networks:
+  mysql:
+    name: mysql
