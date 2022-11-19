@@ -8,7 +8,7 @@ Rename the **env/mysql.env_example** file to **env/mysql.env** and change the pa
 
 ## Deploy
 
-To deploy the containers, just follow the command bellow:
+To deploy the containers, just follow the command below:
 
 ```shell
 docker compose up -d
