@@ -19,8 +19,8 @@ services:
         reservations:
           memory: 500M
     networks:
-      - mysql
+      - mysql_network
 
 networks:
-  mysql:
-    name: mysql
+  mysql_network:
+    name: mysql_network
